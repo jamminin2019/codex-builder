@@ -1,0 +1,19 @@
+{
+  "name": "codex-builder",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "seed": "pnpm --filter api exec ts-node prisma/seed.ts"
+  },
+  "devDependencies": {
+    "turbo": "^1.12.0",
+    "prettier": "^3.0.0"
+  }
+}
